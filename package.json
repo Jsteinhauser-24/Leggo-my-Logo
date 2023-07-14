@@ -1,0 +1,21 @@
+{
+    "name": "leggo-my-logo",
+    "version": "1.0.0",
+    "description": "Command line Logo Genrator.",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "test": "jest"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+      "inquirer": "^8.2.4",
+      "14":"^1.0.1"
+    },
+    "devDependencies": {
+      "jest": "^28.1.3"
+    }
+  }
+  
