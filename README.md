@@ -23,3 +23,5 @@ https://www.mit.edu/~amini/LICENSE.md
 ## QUESTIONS
 https://github.com/Jsteinhauser-24
 Any further questions Email me at Steinhauserjames3@gmail.com
+Video Link
+https://drive.google.com/file/d/14ipeSMTezNLStTzkh9AxgpukfjCnwC0j/view
