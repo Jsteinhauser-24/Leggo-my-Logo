@@ -4,32 +4,33 @@
     const { Shape, Circle, Square, Triangle } = require('./lib/shapes');
 
     const createLogo = async () => {
-        const characters = await inquirer.prompt([
+        const { character } = await inquirer.prompt([
             {
                 type: 'input',
-                name: 'text',
+                name: 'character',
                 message: 'Enter up to 3 Characters',
                 validate: (input) => input.length <= 3,
             },
         ]);
 
-        const color = await inquirer.prompt([
+        const { characterColor } = await inquirer.prompt([
             {
                 type: 'input',
-                name: 'color',
+                name: 'characterColor',
                 message: 'Enter the Color for your Characters',
             },
         ]);
 
-        const shape = await inquirer.prompt([
+        const { shape } = await inquirer.prompt([
             {
                 type: 'list',
                 name: ' shape',
-                choices: ['Circle', 'Square', 'Triangle'],
+                message: 'Pick one',
+                choices: ['circle', 'square', 'triangle'],
             },
         ]);
 
-        const shapeColor = await inquirer.prompt([
+        const { shapeColor } = await inquirer.prompt([
             {
                 type: 'input',
                 name: 'shapeColor',
@@ -38,7 +39,7 @@
             },
         ]);
 
-        let logoShape
+        let logoShape;
         switch (shape) {
             case 'circle':
                 logoShape = new Circle();
@@ -56,7 +57,7 @@
         const svg = `
       <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
         ${logoShape.render()}
-        <text x="150" y="100" fill="${textColor}" text-anchor="middle" dominant-baseline="middle">${text}</text>
+        <text x="150" y="100" fill="${characterColor}" text-anchor="middle" dominant-baseline="middle">${character}</text>
       </svg>
     `;
 
